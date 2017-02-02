@@ -4,6 +4,8 @@ __author__ = 'Dennis De Marco'
 
 import yaml, requests, warnings
 import iptools as ipmgr
+from netaddr import *
+
 
 ### The library currently requires python-hpilo. I'd like to drop this library
 ### In favor for Redfish / REST API.
@@ -84,6 +86,20 @@ class node:
 
         return oob_return
 
+    def set_ip(self,ipmgmr,ip=None):
+        if ip is None:
+            self.ip=ipmgmr.get('PXE')
+        else:
+            self.ip=ip
+
+    def set_gateway(self,gw):
+        self.gateway=gw
+
+    def set_netmask(self,netmask):
+        self.netmask=netmask
+
+
+
 ## Not sure if useful, but added
 
     def oob_getboot(self, oob_username=None, oob_password=None):
@@ -162,8 +178,12 @@ class cluster:
         pass
 
     def generate_ips(self,network,gateway):
+
+        ip = IPNetwork(network)
+        _tmp = []
+
         ## First 20 are used in each lab for network gear
-        self.ip_manager = ipmgr.IPManager(queues={'PXE':network}, used_ips=range(1,20))
+        self.ip_manager = ipmgr.IPManager(queues={'PXE':network}, used_ips=[str(ip.ip)[0:-1]+ str(i) for i in range(1,21)])
 
         # Let's get some IP addresses for the deployment node configuration
 
@@ -171,7 +191,20 @@ class cluster:
 
         self.deploy_host['br-pxe'] = self.ip_manager.get('PXE')
         self.deploy_host['container_ip'] = self.ip_manager.get('PXE')
+        self.deploy_host['netmask'] = ip.netmask
 
+        # Now dish out ip addresses to the nodes
+
+        for node in self.node_dict:
+            self.node_dict[node].set_ip(self.ip_manager)
+            self.node_dict[node].set_gateway(gateway)
+            self.node_dict[node].set_netmask(ip.netmask)
+
+            # Build a list of IP's assigned for dhcp_ranges
+
+            _tmp.append(self.node_dict[node].get('ip'))
+
+        self.dhcp_range =ipmgr.merge_ip_list(_tmp)
 
     def return_id_devices(self):
         tmp = []

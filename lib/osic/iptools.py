@@ -294,3 +294,25 @@ class IPManager(IPBasePlugin):
         for name, network in self._networks.items():
             if addr in network:
                 self._queues[name].append(ip)
+
+def int2dot( intip ):
+    return '.'.join([ str( (intip>>x*8) & 0xFF ) for x in [3,2,1,0]])
+
+def dot2int( dotip ):
+    return reduce( lambda r,x: int(x)+(r<<8), dotip.split('.'), 0 )
+
+def merge_ip_list(ip_list):
+    if not ip_list:
+        return []
+    orig = map(dot2int,ip_list)
+    orig.sort()
+    start = orig[0]
+    prev = start-1
+    res = []
+    for x in orig:
+        if x != prev+1:
+            res.append((int2dot(start),int2dot(prev)))
+            start = x
+        prev = x
+    res.append((int2dot(start),int2dot(prev)))
+    return res

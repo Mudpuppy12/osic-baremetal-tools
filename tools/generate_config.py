@@ -71,7 +71,7 @@ def args():
         '--gateway',
         help='PXE network Gateway to configure',
         required=False,
-        default='172.23.1.1'
+        default='172.23.0.1'
     )
 
     return vars(parser.parse_args())
@@ -92,6 +92,9 @@ def main():
    print len(cloud)
 
    cloud.generate_ips(network,gateway)
+   print cloud.get('dhcp_range')
 
+ #  for node in cloud:
+ #      print node.get('ip')
 if __name__ == "__main__":
     main()
