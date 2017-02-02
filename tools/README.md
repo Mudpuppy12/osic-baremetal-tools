@@ -60,7 +60,10 @@ Version 1.0
 
 ## generate_cobbler.py
 This script was created to improve generating the cobbler system
-initalization.
+initalization. This works best when you <b> run the generate_config.py script</b>
+
+It uses a generate yaml file from the template, so without assigning ips with the
+above script it will not work well.
 
 https://github.com/rsoprivatecloud/osic-bare-metal-deployment-process
 
