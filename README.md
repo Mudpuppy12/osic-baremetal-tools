@@ -10,3 +10,13 @@ Check out the tool directory for more descriptions of the tooling.
 Templates and generated output for your lab data
 ## Libs
 Python libraries for the tooling
+
+
+# Requirements
+
+Beyond what is listed in the requirements.txt file you should also install
+fping used by ilo4_ctrl.py
+<pre>
+# apt-get install fping
+</pre>
+
