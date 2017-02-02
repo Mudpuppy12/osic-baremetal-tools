@@ -30,7 +30,7 @@ def args():
     parser.add_argument(
         '-c',
         '--config-dir',
-        help='Configuration Directory',
+        help='Configuration Directory: Default: [ %(default)s ]',
         required=False,
         default='../configs'
     )
