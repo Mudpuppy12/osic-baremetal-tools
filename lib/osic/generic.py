@@ -26,7 +26,9 @@ class node:
     def __init__(self, id, yml_data):
         self.id = id
         self.__dict__.update(yml_data)
-        self.netmac = {}
+
+        if not hasattr(self,'netmac'):
+          self.netmac = {}
 
     def __str__(self):
         return str(self.id)
