@@ -1,265 +1,646 @@
-## Cloud 9, A 65 node bare metal allotment, using 1 host for deployment/cobbler/pxe
-##
-##
 CLOUD-9:
   deploy_host:
-     device: 729607
-     name: 729607-comp-disk-153.cloud9.osic.rackspace.com
-     oob_ip: 10.15.242.240
+    device: 729607
+    name: 729607-comp-disk-153.cloud9.osic.rackspace.com
+    oob_ip: 10.15.242.240
   nodes:
     node1:
       device: 729451
       name: 729451-comp-disk-089.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-5E-78
+        2: 3C-FD-FE-9C-5E-79
+        3: 3C-FD-FE-9C-5F-D8
+        4: 3C-FD-FE-9C-5F-D9
+        iLO: 3C-A8-2A-1B-34-D2
       oob_ip: 10.15.243.182
     node10:
       device: 729442
       name: 729442-comp-disk-098.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-60-04
+        2: 3C-FD-FE-9C-60-05
+        3: 68-05-CA-32-DF-9C
+        4: 68-05-CA-32-DF-9D
+        iLO: 3C-A8-2A-10-1F-BA
       oob_ip: 10.15.243.173
     node11:
       device: 729441
       name: 729441-comp-disk-099.cloud9.osic.rackspace.com
+      netmac:
+        1: 68-05-CA-32-E0-90
+        2: 68-05-CA-32-E0-91
+        3: 3C-FD-FE-9C-60-6C
+        4: 3C-FD-FE-9C-60-6D
+        iLO: 3C-A8-2A-10-3F-E4
       oob_ip: 10.15.243.172
     node12:
       device: 729440
       name: 729440-comp-disk-100.cloud9.osic.rackspace.com
+      netmac:
+        1: 68-05-CA-32-E0-18
+        2: 68-05-CA-32-E0-19
+        3: 3C-FD-FE-9C-6A-A4
+        4: 3C-FD-FE-9C-6A-A5
+        iLO: 3C-A8-2A-10-2F-44
       oob_ip: 10.15.243.171
     node13:
       device: 729439
       name: 729439-comp-disk-101.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-6A-F4
+        2: 3C-FD-FE-9C-6A-F5
+        3: 3C-FD-FE-9C-68-1C
+        4: 3C-FD-FE-9C-68-1D
+        iLO: 3C-A8-2A-10-CF-78
       oob_ip: 10.15.243.170
     node14:
       device: 729438
       name: 729438-comp-disk-102.cloud9.osic.rackspace.com
+      netmac:
+        1: 68-05-CA-32-49-7C
+        2: 68-05-CA-32-49-7D
+        3: 68-05-CA-32-48-A8
+        4: 68-05-CA-32-48-A9
+        iLO: 3C-A8-2A-10-1F-C6
       oob_ip: 10.15.243.169
     node15:
       device: 729437
       name: 729437-comp-disk-103.cloud9.osic.rackspace.com
+      netmac:
+        1: 68-05-CA-35-8F-50
+        2: 68-05-CA-35-8F-51
+        3: 3C-FD-FE-9C-65-54
+        4: 3C-FD-FE-9C-65-55
+        iLO: 3C-A8-2A-10-1F-D0
       oob_ip: 10.15.243.168
     node16:
       device: 729436
       name: 729436-comp-disk-104.cloud9.osic.rackspace.com
+      netmac:
+        1: 68-05-CA-32-46-C8
+        2: 68-05-CA-32-46-C9
+        3: 68-05-CA-32-46-CC
+        4: 68-05-CA-32-46-CD
+        iLO: 3C-A8-2A-1B-55-D8
       oob_ip: 10.15.243.167
     node17:
       device: 729435
       name: 729435-comp-disk-105.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-61-8C
+        2: 3C-FD-FE-9C-61-8D
+        3: 3C-FD-FE-9C-6A-74
+        4: 3C-FD-FE-9C-6A-75
+        iLO: 3C-A8-2A-1B-55-FA
       oob_ip: 10.15.243.166
     node18:
       device: 729434
       name: 729434-comp-disk-106.cloud9.osic.rackspace.com
+      netmac:
+        1: 68-05-CA-32-49-64
+        2: 68-05-CA-32-49-65
+        3: 3C-FD-FE-9C-62-58
+        4: 3C-FD-FE-9C-62-59
+        iLO: 3C-A8-2A-1B-55-DA
       oob_ip: 10.15.243.165
     node19:
       device: 729433
       name: 729433-comp-disk-107.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-74-04
+        2: 3C-FD-FE-9C-74-05
+        3: 3C-FD-FE-9C-74-0C
+        4: 3C-FD-FE-9C-74-0D
+        iLO: 3C-A8-2A-10-1F-B6
       oob_ip: 10.15.243.164
     node2:
       device: 729450
       name: 729450-comp-disk-090.cloud9.osic.rackspace.com
+      netmac:
+        1: 68-05-CA-32-46-98
+        2: 68-05-CA-32-46-99
+        3: 68-05-CA-32-47-54
+        4: 68-05-CA-32-47-55
+        iLO: 3C-A8-2A-10-2F-6A
       oob_ip: 10.15.243.181
     node20:
       device: 729432
       name: 729432-comp-disk-108.cloud9.osic.rackspace.com
+      netmac:
+        1: 68-05-CA-32-46-D8
+        2: 68-05-CA-32-46-D9
+        3: 3C-FD-FE-9C-6A-9C
+        4: 3C-FD-FE-9C-6A-9D
+        iLO: 3C-A8-2A-1B-34-B0
       oob_ip: 10.15.243.163
     node21:
       device: 729431
       name: 729431-comp-disk-109.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-65-50
+        2: 3C-FD-FE-9C-65-51
+        3: 68-05-CA-32-49-A0
+        4: 68-05-CA-32-49-A1
+        iLO: 3C-A8-2A-10-E9-B6
       oob_ip: 10.15.243.162
     node22:
       device: 729430
       name: 729430-comp-disk-110.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-62-1C
+        2: 3C-FD-FE-9C-62-1D
+        3: 3C-FD-FE-9C-74-00
+        4: 3C-FD-FE-9C-74-01
+        iLO: 3C-A8-2A-10-1F-C4
       oob_ip: 10.15.243.161
     node23:
       device: 729473
       name: 729473-comp-disk-111.cloud9.osic.rackspace.com
+      netmac:
+        1: 68-05-CA-32-49-78
+        2: 68-05-CA-32-49-79
+        3: 68-05-CA-32-46-60
+        4: 68-05-CA-32-46-61
+        iLO: 3C-A8-2A-1B-34-C4
       oob_ip: 10.15.243.204
     node24:
       device: 729472
       name: 729472-comp-disk-112.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-71-6C
+        2: 3C-FD-FE-9C-71-6D
+        3: 68-05-CA-35-90-28
+        4: 68-05-CA-35-90-29
+        iLO: 3C-A8-2A-1B-55-BE
       oob_ip: 10.15.243.203
     node25:
       device: 729471
       name: 729471-comp-disk-113.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-6C-40
+        2: 3C-FD-FE-9C-6C-41
+        3: 3C-FD-FE-9C-6C-E8
+        4: 3C-FD-FE-9C-6C-E9
+        iLO: 3C-A8-2A-1B-65-10
       oob_ip: 10.15.243.202
     node26:
       device: 729470
       name: 729470-comp-disk-114.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-72-64
+        2: 3C-FD-FE-9C-72-65
+        3: 3C-FD-FE-9C-6C-D4
+        4: 3C-FD-FE-9C-6C-D5
+        iLO: 3C-A8-2A-10-7F-EC
       oob_ip: 10.15.243.201
     node27:
       device: 729469
       name: 729469-comp-disk-115.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-6F-48
+        2: 3C-FD-FE-9C-6F-49
+        3: 68-05-CA-32-4A-58
+        4: 68-05-CA-32-4A-59
+        iLO: 3C-A8-2A-1B-34-FC
       oob_ip: 10.15.243.200
     node28:
       device: 729468
       name: 729468-comp-disk-116.cloud9.osic.rackspace.com
+      netmac:
+        1: 68-05-CA-32-46-08
+        2: 68-05-CA-32-46-09
+        3: 3C-FD-FE-9C-72-D4
+        4: 3C-FD-FE-9C-72-D5
+        iLO: 3C-A8-2A-10-5F-6E
       oob_ip: 10.15.243.199
     node29:
       device: 729467
       name: 729467-comp-disk-117.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-72-A0
+        2: 3C-FD-FE-9C-72-A1
+        3: 3C-FD-FE-9C-72-94
+        4: 3C-FD-FE-9C-72-95
+        iLO: 3C-A8-2A-1B-55-CC
       oob_ip: 10.15.243.198
     node3:
       device: 729449
       name: 729449-comp-disk-091.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-6A-7C
+        2: 3C-FD-FE-9C-6A-7D
+        3: 3C-FD-FE-9C-6A-78
+        4: 3C-FD-FE-9C-6A-79
+        iLO: 3C-A8-2A-1B-34-C6
       oob_ip: 10.15.243.180
     node30:
       device: 729466
       name: 729466-comp-disk-118.cloud9.osic.rackspace.com
+      netmac:
+        1: 68-05-CA-35-90-14
+        2: 68-05-CA-35-90-15
+        3: 68-05-CA-35-90-30
+        4: 68-05-CA-35-90-31
+        iLO: 3C-A8-2A-10-1F-48
       oob_ip: 10.15.243.197
     node31:
       device: 729465
       name: 729465-comp-disk-119.cloud9.osic.rackspace.com
+      netmac:
+        1: 68-05-CA-32-49-50
+        2: 68-05-CA-32-49-51
+        3: 68-05-CA-32-48-78
+        4: 68-05-CA-32-48-79
+        iLO: 3C-A8-2A-10-AF-A0
       oob_ip: 10.15.243.196
     node32:
       device: 729464
       name: 729464-comp-disk-120.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-65-2C
+        2: 3C-FD-FE-9C-65-2D
+        3: 68-05-CA-32-47-0C
+        4: 68-05-CA-32-47-0D
+        iLO: 3C-A8-2A-1B-34-CA
       oob_ip: 10.15.243.195
     node33:
       device: 729463
       name: 729463-comp-disk-121.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-6F-FC
+        2: 3C-FD-FE-9C-6F-FD
+        3: 3C-FD-FE-9C-6F-04
+        4: 3C-FD-FE-9C-6F-05
+        iLO: 3C-A8-2A-10-AF-94
       oob_ip: 10.15.243.194
     node34:
       device: 729462
       name: 729462-comp-disk-122.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-6D-98
+        2: 3C-FD-FE-9C-6D-99
+        3: 68-05-CA-32-46-28
+        4: 68-05-CA-32-46-29
+        iLO: 3C-A8-2A-1B-44-6E
       oob_ip: 10.15.243.193
     node35:
       device: 729461
       name: 729461-comp-disk-123.cloud9.osic.rackspace.com
+      netmac:
+        1: 68-05-CA-32-46-EC
+        2: 68-05-CA-32-46-ED
+        3: 68-05-CA-32-47-20
+        4: 68-05-CA-32-47-21
+        iLO: 3C-A8-2A-10-FD-EE
       oob_ip: 10.15.243.192
     node36:
       device: 729460
       name: 729460-comp-disk-124.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-65-30
+        2: 3C-FD-FE-9C-65-31
+        3: 3C-FD-FE-9C-67-00
+        4: 3C-FD-FE-9C-67-01
+        iLO: 3C-A8-2A-1B-44-7E
       oob_ip: 10.15.243.191
     node37:
       device: 729459
       name: 729459-comp-disk-125.cloud9.osic.rackspace.com
+      netmac:
+        1: 68-05-CA-32-48-50
+        2: 68-05-CA-32-48-51
+        3: 3C-FD-FE-9C-73-70
+        4: 3C-FD-FE-9C-73-71
+        iLO: 3C-A8-2A-10-AF-8E
       oob_ip: 10.15.243.190
     node38:
       device: 729458
       name: 729458-comp-disk-126.cloud9.osic.rackspace.com
+      netmac:
+        1: 68-05-CA-32-49-14
+        2: 68-05-CA-32-49-15
+        3: 68-05-CA-32-47-F4
+        4: 68-05-CA-32-47-F5
+        iLO: EC-B1-D7-8F-29-0E
       oob_ip: 10.15.243.189
     node39:
       device: 729457
       name: 729457-comp-disk-127.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-71-44
+        2: 3C-FD-FE-9C-71-45
+        3: 3C-FD-FE-9C-71-CC
+        4: 3C-FD-FE-9C-71-CD
+        iLO: 3C-A8-2A-10-1F-BC
       oob_ip: 10.15.243.188
     node4:
       device: 729448
       name: 729448-comp-disk-092.cloud9.osic.rackspace.com
+      netmac:
+        1: 68-05-CA-32-E0-38
+        2: 68-05-CA-32-E0-39
+        3: 3C-FD-FE-9C-61-24
+        4: 3C-FD-FE-9C-61-25
+        iLO: 3C-A8-2A-1B-34-BA
       oob_ip: 10.15.243.179
     node40:
       device: 729456
       name: 729456-comp-disk-128.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-63-0C
+        2: 3C-FD-FE-9C-63-0D
+        3: 3C-FD-FE-9C-5F-34
+        4: 3C-FD-FE-9C-5F-35
+        iLO: 3C-A8-2A-1B-55-CE
       oob_ip: 10.15.243.187
     node41:
       device: 729455
       name: 729455-comp-disk-129.cloud9.osic.rackspace.com
+      netmac:
+        1: 68-05-CA-32-49-38
+        2: 68-05-CA-32-49-39
+        3: 3C-FD-FE-9C-6D-40
+        4: 3C-FD-FE-9C-6D-41
+        iLO: 3C-A8-2A-1B-55-F4
       oob_ip: 10.15.243.186
     node42:
       device: 729454
       name: 729454-comp-disk-130.cloud9.osic.rackspace.com
+      netmac:
+        1: 68-05-CA-32-49-C8
+        2: 68-05-CA-32-49-C9
+        3: 68-05-CA-32-47-E0
+        4: 68-05-CA-32-47-E1
+        iLO: 38-63-BB-32-83-6C
       oob_ip: 10.15.243.185
     node43:
       device: 729453
       name: 729453-comp-disk-131.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-68-2C
+        2: 3C-FD-FE-9C-68-2D
+        3: 3C-FD-FE-9C-64-B8
+        4: 3C-FD-FE-9C-64-B9
+        iLO: EC-B1-D7-80-6C-8A
       oob_ip: 10.15.243.184
     node44:
       device: 729452
       name: 729452-comp-disk-132.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-62-40
+        2: 3C-FD-FE-9C-62-41
+        3: 3C-FD-FE-9C-62-DC
+        4: 3C-FD-FE-9C-62-DD
+        iLO: 3C-A8-2A-1B-55-F2
       oob_ip: 10.15.243.183
     node45:
       device: 729627
       name: 729627-comp-disk-133.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-61-D4
+        2: 3C-FD-FE-9C-61-D5
+        3: 3C-FD-FE-9C-5F-B4
+        4: 3C-FD-FE-9C-5F-B5
+        iLO: 3C-A8-2A-10-99-92
       oob_ip: 10.15.243.6
     node46:
       device: 729626
       name: 729626-comp-disk-134.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-68-A0
+        2: 3C-FD-FE-9C-68-A1
+        3: 3C-FD-FE-9C-69-7C
+        4: 3C-FD-FE-9C-69-7D
+        iLO: 3C-A8-2A-10-79-0C
       oob_ip: 10.15.243.5
     node47:
       device: 729625
       name: 729625-comp-disk-135.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-6B-CC
+        2: 3C-FD-FE-9C-6B-CD
+        3: 3C-FD-FE-9C-70-80
+        4: 3C-FD-FE-9C-70-81
+        iLO: 3C-A8-2A-10-4A-FC
       oob_ip: 10.15.243.4
     node48:
       device: 729624
       name: 729624-comp-disk-136.cloud9.osic.rackspace.com
+      netmac:
+        1: 68-05-CA-38-64-7C
+        2: 68-05-CA-38-64-7D
+        3: 3C-FD-FE-9C-61-5C
+        4: 3C-FD-FE-9C-61-5D
+        iLO: 3C-A8-2A-1B-44-A0
       oob_ip: 10.15.243.3
     node49:
       device: 729623
       name: 729623-comp-disk-137.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-66-00
+        2: 3C-FD-FE-9C-66-01
+        3: 3C-FD-FE-9C-66-24
+        4: 3C-FD-FE-9C-66-25
+        iLO: 3C-A8-2A-10-79-D6
       oob_ip: 10.15.243.2
     node5:
       device: 729447
       name: 729447-comp-disk-093.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-67-F4
+        2: 3C-FD-FE-9C-67-F5
+        3: 68-05-CA-32-E0-80
+        4: 68-05-CA-32-E0-81
+        iLO: 3C-A8-2A-1B-65-0C
       oob_ip: 10.15.243.178
     node50:
       device: 729622
       name: 729622-comp-disk-138.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-65-C0
+        2: 3C-FD-FE-9C-65-C1
+        3: 3C-FD-FE-9C-64-20
+        4: 3C-FD-FE-9C-64-21
+        iLO: 3C-A8-2A-10-69-C4
       oob_ip: 10.15.243.1
     node51:
       device: 729621
       name: 729621-comp-disk-139.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-66-C8
+        2: 3C-FD-FE-9C-66-C9
+        3: 3C-FD-FE-9C-63-20
+        4: 3C-FD-FE-9C-63-21
+        iLO: 3C-A8-2A-10-1A-72
       oob_ip: 10.15.242.254
     node52:
       device: 729620
       name: 729620-comp-disk-140.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-68-B0
+        2: 3C-FD-FE-9C-68-B1
+        3: 3C-FD-FE-9C-62-24
+        4: 3C-FD-FE-9C-62-25
+        iLO: 3C-A8-2A-10-8B-14
       oob_ip: 10.15.242.253
     node53:
       device: 729619
       name: 729619-comp-disk-141.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-73-B4
+        2: 3C-FD-FE-9C-73-B5
+        3: 3C-FD-FE-9C-66-54
+        4: 3C-FD-FE-9C-66-55
+        iLO: 3C-A8-2A-10-69-8E
       oob_ip: 10.15.242.252
     node54:
       device: 729618
       name: 729618-comp-disk-142.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-66-44
+        2: 3C-FD-FE-9C-66-45
+        3: 3C-FD-FE-9C-68-D0
+        4: 3C-FD-FE-9C-68-D1
+        iLO: 3C-A8-2A-10-3A-2E
       oob_ip: 10.15.242.251
     node55:
       device: 729617
       name: 729617-comp-disk-143.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-68-20
+        2: 3C-FD-FE-9C-68-21
+        3: 3C-FD-FE-9C-5E-F0
+        4: 3C-FD-FE-9C-5E-F1
+        iLO: 3C-A8-2A-1B-55-4E
       oob_ip: 10.15.242.250
     node56:
       device: 729616
       name: 729616-comp-disk-144.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-6B-68
+        2: 3C-FD-FE-9C-6B-69
+        3: 3C-FD-FE-9C-6C-CC
+        4: 3C-FD-FE-9C-6C-CD
+        iLO: 3C-A8-2A-10-0A-FE
       oob_ip: 10.15.242.249
     node57:
       device: 729615
       name: 729615-comp-disk-145.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-67-3C
+        2: 3C-FD-FE-9C-67-3D
+        3: 68-05-CA-38-64-70
+        4: 68-05-CA-38-64-71
+        iLO: 3C-A8-2A-10-69-A0
       oob_ip: 10.15.242.248
     node58:
       device: 729614
       name: 729614-comp-disk-146.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-73-74
+        2: 3C-FD-FE-9C-73-75
+        3: 3C-FD-FE-9C-73-40
+        4: 3C-FD-FE-9C-73-41
+        iLO: 3C-A8-2A-10-0A-E6
       oob_ip: 10.15.242.247
     node59:
       device: 729613
       name: 729613-comp-disk-147.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-6B-B4
+        2: 3C-FD-FE-9C-6B-B5
+        3: 68-05-CA-38-64-A8
+        4: 68-05-CA-38-64-A9
+        iLO: 3C-A8-2A-10-5A-02
       oob_ip: 10.15.242.246
     node6:
       device: 729446
       name: 729446-comp-disk-094.cloud9.osic.rackspace.com
+      netmac:
+        1: 68-05-CA-32-DF-D8
+        2: 68-05-CA-32-DF-D9
+        3: 68-05-CA-32-DF-54
+        4: 68-05-CA-32-DF-55
+        iLO: 3C-A8-2A-10-2F-1C
       oob_ip: 10.15.243.177
     node60:
       device: 729612
       name: 729612-comp-disk-148.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-72-00
+        2: 3C-FD-FE-9C-72-01
+        3: 3C-FD-FE-9C-71-9C
+        4: 3C-FD-FE-9C-71-9D
+        iLO: 3C-A8-2A-10-6A-58
       oob_ip: 10.15.242.245
     node61:
       device: 729611
       name: 729611-comp-disk-149.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-5F-04
+        2: 3C-FD-FE-9C-5F-05
+        3: 3C-FD-FE-9C-70-44
+        4: 3C-FD-FE-9C-70-45
+        iLO: 3C-A8-2A-10-08-B4
       oob_ip: 10.15.242.244
     node62:
       device: 729610
       name: 729610-comp-disk-150.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-66-04
+        2: 3C-FD-FE-9C-66-05
+        3: 3C-FD-FE-9C-67-0C
+        4: 3C-FD-FE-9C-67-0D
+        iLO: 3C-A8-2A-10-2F-86
       oob_ip: 10.15.242.243
     node63:
       device: 729609
       name: 729609-comp-disk-151.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-69-84
+        2: 3C-FD-FE-9C-69-85
+        3: 3C-FD-FE-9C-69-BC
+        4: 3C-FD-FE-9C-69-BD
+        iLO: 3C-A8-2A-10-79-04
       oob_ip: 10.15.242.242
     node64:
       device: 729608
       name: 729608-comp-disk-152.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-6E-DC
+        2: 3C-FD-FE-9C-6E-DD
+        3: 3C-FD-FE-9C-60-88
+        4: 3C-FD-FE-9C-60-89
+        iLO: 3C-A8-2A-10-1F-06
       oob_ip: 10.15.242.241
     node7:
       device: 729445
       name: 729445-comp-disk-095.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-6E-D8
+        2: 3C-FD-FE-9C-6E-D9
+        3: 3C-FD-FE-9C-64-8C
+        4: 3C-FD-FE-9C-64-8D
+        iLO: 3C-A8-2A-1B-55-EC
       oob_ip: 10.15.243.176
     node8:
       device: 729444
       name: 729444-comp-disk-096.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-63-9C
+        2: 3C-FD-FE-9C-63-9D
+        3: 3C-FD-FE-9C-5F-30
+        4: 3C-FD-FE-9C-5F-31
+        iLO: 3C-A8-2A-10-2F-00
       oob_ip: 10.15.243.175
     node9:
       device: 729443
       name: 729443-comp-disk-097.cloud9.osic.rackspace.com
+      netmac:
+        1: 3C-FD-FE-9C-61-70
+        2: 3C-FD-FE-9C-61-71
+        3: 3C-FD-FE-9C-60-5C
+        4: 3C-FD-FE-9C-60-5D
+        iLO: 3C-A8-2A-10-3A-26
       oob_ip: 10.15.243.174
