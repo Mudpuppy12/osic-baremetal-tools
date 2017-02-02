@@ -5,6 +5,8 @@ __author__ = 'Dennis De Marco'
 import yaml, requests, warnings
 import iptools as ipmgr
 from netaddr import *
+import pprint
+
 
 
 ### The library currently requires python-hpilo. I'd like to drop this library
@@ -98,6 +100,15 @@ class node:
     def set_netmask(self,netmask):
         self.netmask=netmask
 
+    def dump(self):
+        filter = ['id']
+        _tmp = {}
+
+        for key in self.__dict__:
+            if key in filter:
+                continue
+            _tmp[key]= self.__dict__[key]
+        return _tmp
 
 
 ## Not sure if useful, but added
@@ -171,14 +182,40 @@ class cluster:
         else:
             return self.deploy_host[key]
 
-    def dump_config(self,directory):
-        pass
+    def dump_config(self,dir="../configs/yml"):
+        ## Tried several ways to do this, but think this is an ok method
+        ## Dumps the objects back to yaml file
+
+
+        c_tmp = {}
+        n_tmp = {}
+
+        filename = str(self).lower() + ".yml"
+
+
+        output = file(dir + '/' + filename, 'w')
+
+        filter=['ip_manager','node_dict','cluster_name']
+
+        for key in self.__dict__:
+            if key not in filter:
+                c_tmp[key]=self.__dict__[key]
+
+        for node in self:
+         #n_tmp.append(node.dump())
+         n_tmp[node.get('id')] = node.dump()
+
+
+        c_tmp['nodes'] = n_tmp
+
+        yaml.dump({str(self):c_tmp}, output, default_flow_style=False)
+        #print yaml.dump({str(self):c_tmp}, default_flow_style=False)
+
 
     def dump_cobbler(self,directory):
         pass
 
     def generate_ips(self,network,gateway):
-
         ip = IPNetwork(network)
         _tmp = []
 
@@ -191,20 +228,20 @@ class cluster:
 
         self.deploy_host['br-pxe'] = self.ip_manager.get('PXE')
         self.deploy_host['container_ip'] = self.ip_manager.get('PXE')
-        self.deploy_host['netmask'] = ip.netmask
+        self.deploy_host['netmask'] = str(ip.netmask)
 
         # Now dish out ip addresses to the nodes
 
         for node in self.node_dict:
             self.node_dict[node].set_ip(self.ip_manager)
             self.node_dict[node].set_gateway(gateway)
-            self.node_dict[node].set_netmask(ip.netmask)
+            self.node_dict[node].set_netmask(str(ip.netmask))
 
             # Build a list of IP's assigned for dhcp_ranges
 
             _tmp.append(self.node_dict[node].get('ip'))
 
-        self.dhcp_range =ipmgr.merge_ip_list(_tmp)
+        self.deploy_host['dhcp_range']=ipmgr.merge_ip_list(_tmp)
 
     def return_id_devices(self):
         tmp = []
