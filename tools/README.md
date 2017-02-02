@@ -91,3 +91,31 @@ Output as such
 <pre>
 cobbler system add --name=729446-comp-disk-094.cloud9.osic.rackspace.com --mac=68-05-CA-32-DF-D8 --profile=ubuntu-14.04.3-server-unattended-osic-generic --hostname=729446-comp-disk-094.cloud9.osic.rackspace.com --interface=p1p1 --ip-address=172.23.0.86 --subnet=255.255.252.0 --gateway=172.23.0.1 --name-servers=8.8.8.8 --kopts="interface=p1p1"
 </pre>
+
+## ilo4_ctrl.py
+This tool will aid you in issuing ILO4 commands to the bare metal hosts
+
+<pre>
+optional arguments:
+  -h, --help            show this help message and exit
+  --powerup             Power up nodes if OFF
+  --powerdown           Power down nodes if ON
+  -r, --powercycle      PowerCycle nodes / reboot
+  -x EXCLUDE [EXCLUDE ...], --exclude EXCLUDE [EXCLUDE ...]
+                        Exclude devices
+  -s, --powerstate      Reports the powerstate of a device
+  -i INCLUDE [INCLUDE ...], --include INCLUDE [INCLUDE ...]
+                        Include only these devices, nothing else
+  -u USER, --user USER  Username to use to connect ILO4
+  -p PASSWORD, --password PASSWORD
+                        Password to use to connect to ILO4
+  --ping                Ping the OOB port
+  -n, --netboot         Set netboot on devices
+  -b, --bootorder       Find the Boot order of the devices
+  --netmacs             Use ILO to fetch network MAC addresses
+  -f FILE, --file FILE  config file. Default: [ cloud-9 ]
+  -c CONFIG_DIR, --config-dir CONFIG_DIR
+                        Configuration Directory: Default: [ ../configs ]
+
+Verson 1.0
+</pre>
