@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 #
-## Basic script to display
 
-import os,sys
+import os,sys, argparse
 
 base_dir = os.path.abspath('..').split('osic-baremetal-tools')[0]
 lib_path = os.path.abspath(os.path.join(base_dir, 'osic-baremetal-tools/lib'))
@@ -10,18 +9,55 @@ sys.path.append(lib_path)
 
 
 from osic import cluster
-from pprint import pprint
 
-config_dir = "../configs"
+def args():
+    """Setup argument Parsing."""
+    parser = argparse.ArgumentParser(
+        usage='%(prog)s',
+        description='OSIC bare metal config generator',
+        epilog='Version 1.0"'
+    )
+
+    parser.add_argument(
+        '-f',
+        '--file',
+        help='config file. Default: [ %(default)s ]',
+        required=False,
+        default= 'cloud-9'
+    )
 
 
-cloud = cluster(config_dir + "/yml/cloud-9.yml")
-#cloud = cluster(config_dir + "/templates/cloud9.dyml")
+    parser.add_argument(
+        '-c',
+        '--config-dir',
+        help='Configuration Directory',
+        required=False,
+        default='../configs'
+    )
 
-print "The cloud name is %s: " % (cloud)
-print "It has %s nodes." % (len(cloud))
+    return vars(parser.parse_args())
 
-print "The node names are:"
+def main():
 
-for node in cloud:
-  print node.get("ip")
+   user_args = args()
+
+   config_dir = user_args['config_dir']
+   filename = user_args['file']
+
+
+   cloud = cluster(config_dir + "/yml/" + filename + ".yml")
+
+   print "The cloud name is: %s" % cloud
+   print "The cloud has %s nodes" % len(cloud)
+
+   print "The deployment node is: %s" % cloud.get_deploy('name')
+   print "This is not included in the node count.\n"
+
+   print "The node names are:"
+
+   for node in cloud:
+     print node.get('name')
+
+
+if __name__ == "__main__":
+    main()
