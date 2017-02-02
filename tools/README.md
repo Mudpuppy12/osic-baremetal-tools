@@ -42,7 +42,9 @@ You can always edit the templates to get what you want on what nodes.
 ## viewer.py
 This is a simple script to display things about your cluster that
 you generated from the config. Used to display some of the functionality
-of the libraries
+of the libraries as well as hints for configuration based on
+the guide located here:
+ https://github.com/rsoprivatecloud/osic-bare-metal-deployment-process
 
 <pre>
 usage: viewer.py
