@@ -1,0 +1,265 @@
+## Cloud 9, A 65 node bare metal allotment, using 1 host for deployment/cobbler/pxe
+##
+##
+CLOUD-9:
+  deploy_host:
+     device: 729607
+     name: 729607-comp-disk-153.cloud9.osic.rackspace.com
+     oob_ip: 10.15.242.240
+  nodes:
+    node1:
+      device: 729451
+      name: 729451-comp-disk-089.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.182
+    node10:
+      device: 729442
+      name: 729442-comp-disk-098.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.173
+    node11:
+      device: 729441
+      name: 729441-comp-disk-099.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.172
+    node12:
+      device: 729440
+      name: 729440-comp-disk-100.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.171
+    node13:
+      device: 729439
+      name: 729439-comp-disk-101.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.170
+    node14:
+      device: 729438
+      name: 729438-comp-disk-102.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.169
+    node15:
+      device: 729437
+      name: 729437-comp-disk-103.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.168
+    node16:
+      device: 729436
+      name: 729436-comp-disk-104.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.167
+    node17:
+      device: 729435
+      name: 729435-comp-disk-105.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.166
+    node18:
+      device: 729434
+      name: 729434-comp-disk-106.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.165
+    node19:
+      device: 729433
+      name: 729433-comp-disk-107.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.164
+    node2:
+      device: 729450
+      name: 729450-comp-disk-090.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.181
+    node20:
+      device: 729432
+      name: 729432-comp-disk-108.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.163
+    node21:
+      device: 729431
+      name: 729431-comp-disk-109.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.162
+    node22:
+      device: 729430
+      name: 729430-comp-disk-110.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.161
+    node23:
+      device: 729473
+      name: 729473-comp-disk-111.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.204
+    node24:
+      device: 729472
+      name: 729472-comp-disk-112.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.203
+    node25:
+      device: 729471
+      name: 729471-comp-disk-113.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.202
+    node26:
+      device: 729470
+      name: 729470-comp-disk-114.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.201
+    node27:
+      device: 729469
+      name: 729469-comp-disk-115.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.200
+    node28:
+      device: 729468
+      name: 729468-comp-disk-116.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.199
+    node29:
+      device: 729467
+      name: 729467-comp-disk-117.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.198
+    node3:
+      device: 729449
+      name: 729449-comp-disk-091.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.180
+    node30:
+      device: 729466
+      name: 729466-comp-disk-118.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.197
+    node31:
+      device: 729465
+      name: 729465-comp-disk-119.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.196
+    node32:
+      device: 729464
+      name: 729464-comp-disk-120.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.195
+    node33:
+      device: 729463
+      name: 729463-comp-disk-121.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.194
+    node34:
+      device: 729462
+      name: 729462-comp-disk-122.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.193
+    node35:
+      device: 729461
+      name: 729461-comp-disk-123.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.192
+    node36:
+      device: 729460
+      name: 729460-comp-disk-124.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.191
+    node37:
+      device: 729459
+      name: 729459-comp-disk-125.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.190
+    node38:
+      device: 729458
+      name: 729458-comp-disk-126.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.189
+    node39:
+      device: 729457
+      name: 729457-comp-disk-127.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.188
+    node4:
+      device: 729448
+      name: 729448-comp-disk-092.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.179
+    node40:
+      device: 729456
+      name: 729456-comp-disk-128.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.187
+    node41:
+      device: 729455
+      name: 729455-comp-disk-129.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.186
+    node42:
+      device: 729454
+      name: 729454-comp-disk-130.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.185
+    node43:
+      device: 729453
+      name: 729453-comp-disk-131.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.184
+    node44:
+      device: 729452
+      name: 729452-comp-disk-132.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.183
+    node45:
+      device: 729627
+      name: 729627-comp-disk-133.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.6
+    node46:
+      device: 729626
+      name: 729626-comp-disk-134.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.5
+    node47:
+      device: 729625
+      name: 729625-comp-disk-135.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.4
+    node48:
+      device: 729624
+      name: 729624-comp-disk-136.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.3
+    node49:
+      device: 729623
+      name: 729623-comp-disk-137.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.2
+    node5:
+      device: 729447
+      name: 729447-comp-disk-093.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.178
+    node50:
+      device: 729622
+      name: 729622-comp-disk-138.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.1
+    node51:
+      device: 729621
+      name: 729621-comp-disk-139.cloud9.osic.rackspace.com
+      oob_ip: 10.15.242.254
+    node52:
+      device: 729620
+      name: 729620-comp-disk-140.cloud9.osic.rackspace.com
+      oob_ip: 10.15.242.253
+    node53:
+      device: 729619
+      name: 729619-comp-disk-141.cloud9.osic.rackspace.com
+      oob_ip: 10.15.242.252
+    node54:
+      device: 729618
+      name: 729618-comp-disk-142.cloud9.osic.rackspace.com
+      oob_ip: 10.15.242.251
+    node55:
+      device: 729617
+      name: 729617-comp-disk-143.cloud9.osic.rackspace.com
+      oob_ip: 10.15.242.250
+    node56:
+      device: 729616
+      name: 729616-comp-disk-144.cloud9.osic.rackspace.com
+      oob_ip: 10.15.242.249
+    node57:
+      device: 729615
+      name: 729615-comp-disk-145.cloud9.osic.rackspace.com
+      oob_ip: 10.15.242.248
+    node58:
+      device: 729614
+      name: 729614-comp-disk-146.cloud9.osic.rackspace.com
+      oob_ip: 10.15.242.247
+    node59:
+      device: 729613
+      name: 729613-comp-disk-147.cloud9.osic.rackspace.com
+      oob_ip: 10.15.242.246
+    node6:
+      device: 729446
+      name: 729446-comp-disk-094.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.177
+    node60:
+      device: 729612
+      name: 729612-comp-disk-148.cloud9.osic.rackspace.com
+      oob_ip: 10.15.242.245
+    node61:
+      device: 729611
+      name: 729611-comp-disk-149.cloud9.osic.rackspace.com
+      oob_ip: 10.15.242.244
+    node62:
+      device: 729610
+      name: 729610-comp-disk-150.cloud9.osic.rackspace.com
+      oob_ip: 10.15.242.243
+    node63:
+      device: 729609
+      name: 729609-comp-disk-151.cloud9.osic.rackspace.com
+      oob_ip: 10.15.242.242
+    node64:
+      device: 729608
+      name: 729608-comp-disk-152.cloud9.osic.rackspace.com
+      oob_ip: 10.15.242.241
+    node7:
+      device: 729445
+      name: 729445-comp-disk-095.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.176
+    node8:
+      device: 729444
+      name: 729444-comp-disk-096.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.175
+    node9:
+      device: 729443
+      name: 729443-comp-disk-097.cloud9.osic.rackspace.com
+      oob_ip: 10.15.243.174
