@@ -14,8 +14,8 @@ def args():
     """Setup argument Parsing."""
     parser = argparse.ArgumentParser(
         usage='%(prog)s',
-        description='OSIC bare metal config generator',
-        epilog='Version 1.0"'
+        description='OSIC bare metal viewer',
+        epilog='Version 1.0'
     )
 
     parser.add_argument(

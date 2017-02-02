@@ -20,7 +20,7 @@ def args():
     parser = argparse.ArgumentParser(
         usage='%(prog)s',
         description='OSIC bare metal config generator',
-        epilog='Version 1.0"'
+        epilog='Version 1.0'
     )
 
     parser.add_argument(
