@@ -15,8 +15,8 @@ from pprint import pprint
 config_dir = "../configs"
 
 
-cloud = cluster(config_dir + "/templates/cloud9.dyml")
-
+cloud = cluster(config_dir + "/yml/cloud-9.yml")
+#cloud = cluster(config_dir + "/templates/cloud9.dyml")
 
 print "The cloud name is %s: " % (cloud)
 print "It has %s nodes." % (len(cloud))
@@ -24,4 +24,4 @@ print "It has %s nodes." % (len(cloud))
 print "The node names are:"
 
 for node in cloud:
-  print node.get("name")
+  print node.get("ip")
