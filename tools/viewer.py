@@ -2,10 +2,14 @@
 #
 
 import os,sys, argparse
+from netaddr import IPAddress
 
 base_dir = os.path.abspath('..').split('osic-baremetal-tools')[0]
 lib_path = os.path.abspath(os.path.join(base_dir, 'osic-baremetal-tools/lib'))
 sys.path.append(lib_path)
+
+
+
 
 
 from osic import cluster
@@ -51,8 +55,22 @@ def main():
    print "The cloud has %s nodes" % len(cloud)
 
    print "The deployment node is: %s" % cloud.get_deploy('name')
-   print "This is not included in the node count.\n"
 
+   print "The br-pxe address is %s, with a netmask of %s, and gateway of %s" % (cloud.get_deploy('br-pxe'),
+                                                                                cloud.get_deploy('netmask'),
+                                                                                cloud.get_deploy('gateway')
+
+                                                                                )
+   print "The lxc.network.ipv4 is %s" % (cloud.get_deploy('container_ip') + "/" + str(IPAddress(cloud.get_deploy('netmask')).netmask_bits()))
+   print "next_server and server address is %s" % cloud.get_deploy('container_ip')
+
+   start = cloud.get_deploy('dhcp_range')[0][0]
+   end = cloud.get_deploy('dhcp_range')[0][1]
+
+   print "The dynamic-bootp range is: %s  thru %s " % (start, end)
+
+
+   print "\n"
    print "The node names are:"
 
    for node in cloud:
