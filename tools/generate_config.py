@@ -12,11 +12,6 @@ sys.path.append(lib_path)
 
 from osic import cluster
 
-from pprint import pprint
-
-CONFIG_DIR = "../configs"
-
-
 def args():
     """Setup argument Parsing."""
     parser = argparse.ArgumentParser(
@@ -53,7 +48,7 @@ def args():
     parser.add_argument(
         '-c',
         '--config-dir',
-        help='Configuration Directory',
+        help='Configuration Directory: Default: [ %(default)s ]',
         required=False,
         default='../configs'
     )
@@ -61,7 +56,7 @@ def args():
     parser.add_argument(
         '-n',
         '--network',
-        help='PXE network to configure',
+        help='PXE network to configure: Default: [ %(default)s ]',
         required=False,
         default='172.23.0.0/22'
     )
@@ -69,7 +64,7 @@ def args():
     parser.add_argument(
         '-gw',
         '--gateway',
-        help='PXE network Gateway to configure',
+        help='PXE network Gateway to configure: Default: [ %(default)s ]',
         required=False,
         default='172.23.0.1'
     )
