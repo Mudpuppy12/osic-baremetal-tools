@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 #
-## Basic script to display
+## This script will take a template file and generate a detailed
+## configuration for the lab environment.
 
 import os,sys, argparse
-
 
 base_dir = os.path.abspath('..').split('osic-baremetal-tools')[0]
 lib_path = os.path.abspath(os.path.join(base_dir, 'osic-baremetal-tools/lib'))
@@ -30,7 +30,7 @@ def args():
         '--file',
         help='config file. Default: [ %(default)s ]',
         required=False,
-        default= 'cloud9'
+        default= 'cloud-9'
     )
 
     parser.add_argument(
@@ -87,14 +87,11 @@ def main():
    filename = user_args['file']
    gateway = user_args['gateway']
 
-   cloud = cluster(config_dir + "/templates/" + filename + ".dyml")
 
-   print len(cloud)
 
-   cloud.generate_ips(network,gateway)
-   print cloud.get('dhcp_range')
+   cloud = cluster(config_dir + "/templates/" + filename + ".tmpl")
+   #cloud.generate_ips(network,gateway)
+   cloud.dump_config()
 
- #  for node in cloud:
- #      print node.get('ip')
 if __name__ == "__main__":
     main()
