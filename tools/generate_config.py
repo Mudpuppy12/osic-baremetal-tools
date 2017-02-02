@@ -87,10 +87,8 @@ def main():
    filename = user_args['file']
    gateway = user_args['gateway']
 
-
-
    cloud = cluster(config_dir + "/templates/" + filename + ".tmpl")
-   #cloud.generate_ips(network,gateway)
+   cloud.generate_ips(network,gateway)
    cloud.dump_config()
 
 if __name__ == "__main__":
